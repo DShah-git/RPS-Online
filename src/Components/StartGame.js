@@ -206,21 +206,21 @@ const StartGame = ({displayName}) => {
                     <div>
                         <p> {displayName} </p>
                     </div>
-                    <div>
-                    
+                </div>
+                <div className='next phone'>
                     {
                         newRound===true? 
                         <button onClick={()=>startNewRound()} className="btnStart recolor">
                             <span className="front resize" >next round</span>    
                         </button> :
                         ''
-                    }
-                    
-                    </div>
+                    }    
                 </div>
-               
+                
+
+                      
                 <div className='options'>
-                    
+                   
                     <div className="option">
                         <span onClick={()=>optionSelected('Rock')} className='optionFront'>Rock</span>
                     </div>
@@ -231,14 +231,25 @@ const StartGame = ({displayName}) => {
                         <span onClick={()=>optionSelected('Scissor')} className='optionFront'>Scissor</span>
                     </div>
                 </div>
-                &nbsp;Choose :
-                <div className="oppPlay">
-                       {
-                           playerAction!==''?
-                           <p><span className="displayNamePlayer">You </span>threw a {playerAction}</p>
-                           : ''
-                       }
-                        
+                 
+                <div class="top-player">
+                    <div className="oppPlay">
+                        {
+                            playerAction!==''?
+                            <p><span className="displayNamePlayer">You </span>threw a {playerAction}</p>
+                            : ''
+                        } 
+
+                    </div>
+                    <div className='next desktop'>
+                        {
+                            newRound===true? 
+                            <button onClick={()=>startNewRound()} className="btnStart recolor">
+                                <span className="front resize" >next round</span>    
+                            </button> :
+                            ''
+                        }    
+                    </div>
                 </div>
                 
 
